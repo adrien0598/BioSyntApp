@@ -1,0 +1,190 @@
+Le : 01/10/2021
+Base de données : basedd.sqlite
+Requêtes valides effectuées et résultats correspondant
+
+
+ALTER TABLE Level ADD lvl INT
+
+
+ALTER TABLE Level ADD langue VARCHAR(20)
+
+
+UPDATE Level SET lvl = 1 WHERE id = 1
+Voici les effets de la modification : 
+id   title                                                                                 goal                                      need                                                                      lvl     langue  
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1    Expression of red protein                                                             RedGene                                   RedGene, BlueGene, RedProm, BlueProm                                      1       None    
+2    Expression of red and green protein.                                                  RedGene,GreenGene                         RedGene, BlueGene, GreenGene, RedProm, BlueProm, GreenProm                None    None    
+3    Expression of red protein if lactose. Else : no expression                            RedGene:Lactose;no:no                     RedGene, BlueGene, RedProm, BlueProm, RepreLac, ActiLac                   None    None    
+4    No expression if lactose. Else : expression of red protein.                           RedGene:no;no:Lactose                     RedGene, BlueGene, RedPromWeak, BlueProm, RepreLac, ActiLac               None    None    
+5    Expression of green protein if lactose. Else : expression of green and red protein    GreenGene:Lactose;RedGene,GreenGene:no    RedGene, RedProm, RedPromWeak, GreenGene, GreenProm, RepreLac, ActiLac    None    None    
+La modification a été validée ! 
+
+
+UPDATE Level SET lvl = 2 WHERE id = 2
+Voici les effets de la modification : 
+id   title                                                                                 goal                                      need                                                                      lvl     langue  
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1    Expression of red protein                                                             RedGene                                   RedGene, BlueGene, RedProm, BlueProm                                      1       None    
+2    Expression of red and green protein.                                                  RedGene,GreenGene                         RedGene, BlueGene, GreenGene, RedProm, BlueProm, GreenProm                2       None    
+3    Expression of red protein if lactose. Else : no expression                            RedGene:Lactose;no:no                     RedGene, BlueGene, RedProm, BlueProm, RepreLac, ActiLac                   None    None    
+4    No expression if lactose. Else : expression of red protein.                           RedGene:no;no:Lactose                     RedGene, BlueGene, RedPromWeak, BlueProm, RepreLac, ActiLac               None    None    
+5    Expression of green protein if lactose. Else : expression of green and red protein    GreenGene:Lactose;RedGene,GreenGene:no    RedGene, RedProm, RedPromWeak, GreenGene, GreenProm, RepreLac, ActiLac    None    None    
+La modification a été validée ! 
+
+
+UPDATE Level SET lvl = 3 WHERE id = 3
+Voici les effets de la modification : 
+id   title                                                                                 goal                                      need                                                                      lvl     langue  
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1    Expression of red protein                                                             RedGene                                   RedGene, BlueGene, RedProm, BlueProm                                      1       None    
+2    Expression of red and green protein.                                                  RedGene,GreenGene                         RedGene, BlueGene, GreenGene, RedProm, BlueProm, GreenProm                2       None    
+3    Expression of red protein if lactose. Else : no expression                            RedGene:Lactose;no:no                     RedGene, BlueGene, RedProm, BlueProm, RepreLac, ActiLac                   3       None    
+4    No expression if lactose. Else : expression of red protein.                           RedGene:no;no:Lactose                     RedGene, BlueGene, RedPromWeak, BlueProm, RepreLac, ActiLac               None    None    
+5    Expression of green protein if lactose. Else : expression of green and red protein    GreenGene:Lactose;RedGene,GreenGene:no    RedGene, RedProm, RedPromWeak, GreenGene, GreenProm, RepreLac, ActiLac    None    None    
+La modification a été validée ! 
+
+
+UPDATE Level SET lvl = 4 WHERE id = 4
+Voici les effets de la modification : 
+id   title                                                                                 goal                                      need                                                                      lvl     langue  
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1    Expression of red protein                                                             RedGene                                   RedGene, BlueGene, RedProm, BlueProm                                      1       None    
+2    Expression of red and green protein.                                                  RedGene,GreenGene                         RedGene, BlueGene, GreenGene, RedProm, BlueProm, GreenProm                2       None    
+3    Expression of red protein if lactose. Else : no expression                            RedGene:Lactose;no:no                     RedGene, BlueGene, RedProm, BlueProm, RepreLac, ActiLac                   3       None    
+4    No expression if lactose. Else : expression of red protein.                           RedGene:no;no:Lactose                     RedGene, BlueGene, RedPromWeak, BlueProm, RepreLac, ActiLac               4       None    
+5    Expression of green protein if lactose. Else : expression of green and red protein    GreenGene:Lactose;RedGene,GreenGene:no    RedGene, RedProm, RedPromWeak, GreenGene, GreenProm, RepreLac, ActiLac    None    None    
+La modification a été validée ! 
+
+
+UPDATE Level SET lvl = 5 WHERE id = 5
+Voici les effets de la modification : 
+id   title                                                                                 goal                                      need                                                                      lvl  langue  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1    Expression of red protein                                                             RedGene                                   RedGene, BlueGene, RedProm, BlueProm                                      1    None    
+2    Expression of red and green protein.                                                  RedGene,GreenGene                         RedGene, BlueGene, GreenGene, RedProm, BlueProm, GreenProm                2    None    
+3    Expression of red protein if lactose. Else : no expression                            RedGene:Lactose;no:no                     RedGene, BlueGene, RedProm, BlueProm, RepreLac, ActiLac                   3    None    
+4    No expression if lactose. Else : expression of red protein.                           RedGene:no;no:Lactose                     RedGene, BlueGene, RedPromWeak, BlueProm, RepreLac, ActiLac               4    None    
+5    Expression of green protein if lactose. Else : expression of green and red protein    GreenGene:Lactose;RedGene,GreenGene:no    RedGene, RedProm, RedPromWeak, GreenGene, GreenProm, RepreLac, ActiLac    5    None    
+La modification a été validée ! 
+
+
+UPDATE Level SET langue = "FR"
+Voici les effets de la modification : 
+id   title                                                                                 goal                                      need                                                                      lvl  langue
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1    Expression of red protein                                                             RedGene                                   RedGene, BlueGene, RedProm, BlueProm                                      1    FR    
+2    Expression of red and green protein.                                                  RedGene,GreenGene                         RedGene, BlueGene, GreenGene, RedProm, BlueProm, GreenProm                2    FR    
+3    Expression of red protein if lactose. Else : no expression                            RedGene:Lactose;no:no                     RedGene, BlueGene, RedProm, BlueProm, RepreLac, ActiLac                   3    FR    
+4    No expression if lactose. Else : expression of red protein.                           RedGene:no;no:Lactose                     RedGene, BlueGene, RedPromWeak, BlueProm, RepreLac, ActiLac               4    FR    
+5    Expression of green protein if lactose. Else : expression of green and red protein    GreenGene:Lactose;RedGene,GreenGene:no    RedGene, RedProm, RedPromWeak, GreenGene, GreenProm, RepreLac, ActiLac    5    FR    
+La modification a été validée ! 
+
+
+UPDATE Level SET langue = "EN"
+Voici les effets de la modification : 
+id   title                                                                                 goal                                      need                                                                      lvl  langue
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1    Expression of red protein                                                             RedGene                                   RedGene, BlueGene, RedProm, BlueProm                                      1    EN    
+2    Expression of red and green protein.                                                  RedGene,GreenGene                         RedGene, BlueGene, GreenGene, RedProm, BlueProm, GreenProm                2    EN    
+3    Expression of red protein if lactose. Else : no expression                            RedGene:Lactose;no:no                     RedGene, BlueGene, RedProm, BlueProm, RepreLac, ActiLac                   3    EN    
+4    No expression if lactose. Else : expression of red protein.                           RedGene:no;no:Lactose                     RedGene, BlueGene, RedPromWeak, BlueProm, RepreLac, ActiLac               4    EN    
+5    Expression of green protein if lactose. Else : expression of green and red protein    GreenGene:Lactose;RedGene,GreenGene:no    RedGene, RedProm, RedPromWeak, GreenGene, GreenProm, RepreLac, ActiLac    5    EN    
+La modification a été validée ! 
+
+
+INSERT INTO Level (id, title, goal, need, lvl, langue) VALUES (6, "Production de la protéine rouge", "RedGene", "RedGene, BlueGene, RedProm, BlueProm", 1, "FR")
+Voici les effets de la modification : 
+id   title                                                                                 goal                                      need                                                                      lvl  langue
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1    Expression of red protein                                                             RedGene                                   RedGene, BlueGene, RedProm, BlueProm                                      1    EN    
+2    Expression of red and green protein.                                                  RedGene,GreenGene                         RedGene, BlueGene, GreenGene, RedProm, BlueProm, GreenProm                2    EN    
+3    Expression of red protein if lactose. Else : no expression                            RedGene:Lactose;no:no                     RedGene, BlueGene, RedProm, BlueProm, RepreLac, ActiLac                   3    EN    
+4    No expression if lactose. Else : expression of red protein.                           RedGene:no;no:Lactose                     RedGene, BlueGene, RedPromWeak, BlueProm, RepreLac, ActiLac               4    EN    
+5    Expression of green protein if lactose. Else : expression of green and red protein    GreenGene:Lactose;RedGene,GreenGene:no    RedGene, RedProm, RedPromWeak, GreenGene, GreenProm, RepreLac, ActiLac    5    EN    
+6    Production de la protéine rouge                                                       RedGene                                   RedGene, BlueGene, RedProm, BlueProm                                      1    FR    
+La modification a été validée ! 
+
+
+INSERT INTO Level (id, title, goal, need, lvl, langue) VALUES (7, "Production des protéines rouge et verte", "RedGene,GreenGene", "RedGene, BlueGene, GreenGene, RedProm, BlueProm, GreenProm", 2, "FR")
+Voici les effets de la modification : 
+id   title                                                                                 goal                                      need                                                                      lvl  langue
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1    Expression of red protein                                                             RedGene                                   RedGene, BlueGene, RedProm, BlueProm                                      1    EN    
+2    Expression of red and green protein.                                                  RedGene,GreenGene                         RedGene, BlueGene, GreenGene, RedProm, BlueProm, GreenProm                2    EN    
+3    Expression of red protein if lactose. Else : no expression                            RedGene:Lactose;no:no                     RedGene, BlueGene, RedProm, BlueProm, RepreLac, ActiLac                   3    EN    
+4    No expression if lactose. Else : expression of red protein.                           RedGene:no;no:Lactose                     RedGene, BlueGene, RedPromWeak, BlueProm, RepreLac, ActiLac               4    EN    
+5    Expression of green protein if lactose. Else : expression of green and red protein    GreenGene:Lactose;RedGene,GreenGene:no    RedGene, RedProm, RedPromWeak, GreenGene, GreenProm, RepreLac, ActiLac    5    EN    
+6    Production de la protéine rouge                                                       RedGene                                   RedGene, BlueGene, RedProm, BlueProm                                      1    FR    
+7    Production des protéines rouge et verte                                               RedGene,GreenGene                         RedGene, BlueGene, GreenGene, RedProm, BlueProm, GreenProm                2    FR    
+La modification a été validée ! 
+
+
+INSERT INTO Level (id, title, goal, need, lvl, langue) VALUES (8, "Production de la protéine rouge si presence de Lactose. Pas d'expression sinon.", "RedGene:Lactose;no:no", "RedGene, BlueGene, RedProm, BlueProm, RepreLac, ActiLac", 3, "FR")
+Voici les effets de la modification : 
+id   title                                                                                 goal                                      need                                                                      lvl  langue
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1    Expression of red protein                                                             RedGene                                   RedGene, BlueGene, RedProm, BlueProm                                      1    EN    
+2    Expression of red and green protein.                                                  RedGene,GreenGene                         RedGene, BlueGene, GreenGene, RedProm, BlueProm, GreenProm                2    EN    
+3    Expression of red protein if lactose. Else : no expression                            RedGene:Lactose;no:no                     RedGene, BlueGene, RedProm, BlueProm, RepreLac, ActiLac                   3    EN    
+4    No expression if lactose. Else : expression of red protein.                           RedGene:no;no:Lactose                     RedGene, BlueGene, RedPromWeak, BlueProm, RepreLac, ActiLac               4    EN    
+5    Expression of green protein if lactose. Else : expression of green and red protein    GreenGene:Lactose;RedGene,GreenGene:no    RedGene, RedProm, RedPromWeak, GreenGene, GreenProm, RepreLac, ActiLac    5    EN    
+6    Production de la protéine rouge                                                       RedGene                                   RedGene, BlueGene, RedProm, BlueProm                                      1    FR    
+7    Production des protéines rouge et verte                                               RedGene,GreenGene                         RedGene, BlueGene, GreenGene, RedProm, BlueProm, GreenProm                2    FR    
+8    Production de la protéine rouge si presence de Lactose. Pas d'expression sinon.       RedGene:Lactose;no:no                     RedGene, BlueGene, RedProm, BlueProm, RepreLac, ActiLac                   3    FR    
+La modification a été validée ! 
+
+
+INSERT INTO Level (id, title, goal, need, lvl, langue) VALUES (9, "Production de la protéine rouge en l'absence de Lactose. Pas d'expression sinon.", "RedGene:no;no:Lactose", "RedGene, BlueGene, RedPromWeak, BlueProm, RepreLac, ActiLac", 4, "FR")
+Voici les effets de la modification : 
+id   title                                                                                 goal                                      need                                                                      lvl  langue
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1    Expression of red protein                                                             RedGene                                   RedGene, BlueGene, RedProm, BlueProm                                      1    EN    
+2    Expression of red and green protein.                                                  RedGene,GreenGene                         RedGene, BlueGene, GreenGene, RedProm, BlueProm, GreenProm                2    EN    
+3    Expression of red protein if lactose. Else : no expression                            RedGene:Lactose;no:no                     RedGene, BlueGene, RedProm, BlueProm, RepreLac, ActiLac                   3    EN    
+4    No expression if lactose. Else : expression of red protein.                           RedGene:no;no:Lactose                     RedGene, BlueGene, RedPromWeak, BlueProm, RepreLac, ActiLac               4    EN    
+5    Expression of green protein if lactose. Else : expression of green and red protein    GreenGene:Lactose;RedGene,GreenGene:no    RedGene, RedProm, RedPromWeak, GreenGene, GreenProm, RepreLac, ActiLac    5    EN    
+6    Production de la protéine rouge                                                       RedGene                                   RedGene, BlueGene, RedProm, BlueProm                                      1    FR    
+7    Production des protéines rouge et verte                                               RedGene,GreenGene                         RedGene, BlueGene, GreenGene, RedProm, BlueProm, GreenProm                2    FR    
+8    Production de la protéine rouge si presence de Lactose. Pas d'expression sinon.       RedGene:Lactose;no:no                     RedGene, BlueGene, RedProm, BlueProm, RepreLac, ActiLac                   3    FR    
+9    Production de la protéine rouge en l'absence de Lactose. Pas d'expression sinon.      RedGene:no;no:Lactose                     RedGene, BlueGene, RedPromWeak, BlueProm, RepreLac, ActiLac               4    FR    
+La modification a été validée ! 
+
+
+INSERT INTO Level (id, title, goal, need, lvl, langue) VALUES (10, "Production de la protéine verte en presence de Lactose. Production de rouge et vert sinon.", "GreenGene:Lactose;RedGene,GreenGene:no", "RedGene, RedProm, RedPromWeak, GreenGene, GreenProm, RepreLac, ActiLac", 5, "FR")
+Voici les effets de la modification : 
+id    title                                                                                         goal                                      need                                                                      lvl  langue
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1     Expression of red protein                                                                     RedGene                                   RedGene, BlueGene, RedProm, BlueProm                                      1    EN    
+2     Expression of red and green protein.                                                          RedGene,GreenGene                         RedGene, BlueGene, GreenGene, RedProm, BlueProm, GreenProm                2    EN    
+3     Expression of red protein if lactose. Else : no expression                                    RedGene:Lactose;no:no                     RedGene, BlueGene, RedProm, BlueProm, RepreLac, ActiLac                   3    EN    
+4     No expression if lactose. Else : expression of red protein.                                   RedGene:no;no:Lactose                     RedGene, BlueGene, RedPromWeak, BlueProm, RepreLac, ActiLac               4    EN    
+5     Expression of green protein if lactose. Else : expression of green and red protein            GreenGene:Lactose;RedGene,GreenGene:no    RedGene, RedProm, RedPromWeak, GreenGene, GreenProm, RepreLac, ActiLac    5    EN    
+6     Production de la protéine rouge                                                               RedGene                                   RedGene, BlueGene, RedProm, BlueProm                                      1    FR    
+7     Production des protéines rouge et verte                                                       RedGene,GreenGene                         RedGene, BlueGene, GreenGene, RedProm, BlueProm, GreenProm                2    FR    
+8     Production de la protéine rouge si presence de Lactose. Pas d'expression sinon.               RedGene:Lactose;no:no                     RedGene, BlueGene, RedProm, BlueProm, RepreLac, ActiLac                   3    FR    
+9     Production de la protéine rouge en l'absence de Lactose. Pas d'expression sinon.              RedGene:no;no:Lactose                     RedGene, BlueGene, RedPromWeak, BlueProm, RepreLac, ActiLac               4    FR    
+10    Production de la protéine verte en presence de Lactose. Production de rouge et vert sinon.    GreenGene:Lactose;RedGene,GreenGene:no    RedGene, RedProm, RedPromWeak, GreenGene, GreenProm, RepreLac, ActiLac    5    FR    
+La modification a été validée ! 
+
+
+CREATE TABLE Preferences (langue VARCHAR(10), mode VARCHAR(10), sond VARCHAR(10))
+
+
+INSERT INTO Preferences VALUES ("FR", "WT", "ON")
+Voici les effets de la modification : 
+languemode  sond  
+------------------
+FR    WT    ON    
+La modification a été validée ! 
+
+
+ALTER TABLE Preferences ADD id VARCHAR(20)
+
+
+UPDATE Preferences SET id = "user1"
+Voici les effets de la modification : 
+languemode  sond  id       
+---------------------------
+FR    WT    ON    user1    
+La modification a été validée ! 
