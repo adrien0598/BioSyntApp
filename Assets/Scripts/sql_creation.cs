@@ -17,14 +17,12 @@ public class sql_creation : MonoBehaviour
         if (!File.Exists(filepath))
 
         {
-
-            // if it doesn't ->
-
+            // si existe pas déjà ->
             // open StreamingAssets directory and load the db ->
 
             WWW loadDB = new WWW("jar:file://" + Application.dataPath + "!/assets/" + p);  // this is the path to the StreamingAssets in android
 
-            while (!loadDB.isDone) { }  // CAREFUL here, for safety reasons you shouldn't let this while loop unattended, place a timer and error check
+            while (!loadDB.isDone) { }  // CAREFUL here, for safety reasons shouldn't let this while loop unattended, maybe place a timer and error check
 
             // then save to Application.persistentDataPath
 
@@ -33,7 +31,6 @@ public class sql_creation : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         

@@ -24,7 +24,7 @@ public class CreateListLevels : MonoBehaviour
         var w = p2.y - p1.y;
 
         ////SQL/////
-        ///
+
         string p = "basedd.sqlite";
         string filepath = Application.persistentDataPath + "/" + p;
 
@@ -74,6 +74,7 @@ public class CreateListLevels : MonoBehaviour
         dbcmd = null;
         dbconn.Close();
         dbconn = null;
+        
         ////SQL//////
 
 
@@ -93,7 +94,7 @@ public class CreateListLevels : MonoBehaviour
                     break;
             }
 
-            button.transform.SetParent(buttonTemplate.transform.parent, false); //false pour le worlposition
+            button.transform.SetParent(buttonTemplate.transform.parent, false); //false pour le worldposition
             button.transform.position = position;
 
             position.y = position.y - (w + 5);
@@ -109,7 +110,8 @@ public class CreateListLevels : MonoBehaviour
         SceneManager.LoadScene("Game");
     }
 
-    private int FindEspace(String chaine) //équivaut à faire un chaine.IndexOf(" ")
+
+    private int FindEspace(String chaine) //équivaut à faire un chaine.IndexOf(" ") ...
     {
         int place = 0;
 

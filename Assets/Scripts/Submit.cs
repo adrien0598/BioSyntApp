@@ -27,7 +27,7 @@ public class Submit : MonoBehaviour
 
     public Vector3 Centre;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         
@@ -103,7 +103,7 @@ public class Submit : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         
@@ -173,11 +173,8 @@ public class Submit : MonoBehaviour
             Debug.Log("tour " + i + " : on vérifie que pour l'entrée " + input[i] + ", on obtient bien la sortie " + output[i]);
             //On clean les listes de briques présente en enlevant celles qui ne sont pas sur le vecteur
             clean();
-            Debug.Log("étape 0");
             // On cascade les repressions
             repression();
-
-            Debug.Log("étape 1");
 
             conteur = 0;
             ou.Clear();
@@ -190,7 +187,7 @@ public class Submit : MonoBehaviour
                 }
             }
             ou.Add(output[i].Substring(conteur, output[i].Length - conteur));
-            Debug.Log("étape 2");
+
             //On fait une liste avec tout les gènes non présent dans output mais present dans genes pour vérif après qu'ils ne sont pas exprimées
             List<string> rebus = new List<string>();
             rebus.Clear();
@@ -206,19 +203,17 @@ public class Submit : MonoBehaviour
             if (rebus.Count > 0 & !ou[0].Equals("no"))
             {
                 if (!notActivated(rebus))
-                {//MAIS QUE SE PASSE  IL ?
-                    Debug.Log("rentre 2");
-                    return (false); //ok c'est un peu expeditif on fait pas les autres tests mais bon ça gagne masse temps
+                {
+                    return (false); //ok c'est un peu expeditif on fait pas les autres tests mais bon ça gagne masse temps, il faudra changer si on veut indiquer au joueur la cause exacte.
                 }
             }
-            Debug.Log("étape 3");
 
             for (int k = 0; k < ou.Count; k++)
             {
-                // (On cascade les activations) correctif, on vérifie que le gène goal est bien activé (retrospectivement).
+                // On vérifie que le gène goal est bien activé (retrospectivement).
                 if (!ou[k].Equals("no"))
                 {
-                    //attention ça part en récursif !
+                    // ça part en récursif !
                     if (activation(ou[k]).Equals("yes") & isPresentgene(ou[k]))
                     {
                         //le test i a réussi
@@ -300,7 +295,7 @@ public class Submit : MonoBehaviour
         //les env (input) inhibe si - dans toutes les autres listes (pro, acti, ehan, gene)
 
         ////SQL/////
-        ///
+
         string p = "basedd.sqlite";
         string filepath = Application.persistentDataPath + "/" + p;
 
@@ -355,6 +350,8 @@ public class Submit : MonoBehaviour
                     {
                         List<GameObject> aEnlever = new List<GameObject>(); // je me demande si ça va planter quant il y aura plusieurs passages
                                                                             //on verra
+                                                                            // apparement non
+                                                                            
                         //GENE
                         foreach (GameObject item in genes)
                         {
@@ -368,7 +365,7 @@ public class Submit : MonoBehaviour
                             genes.Remove(item);
                         }
 
-                        //PRO
+                        //PROM
                         foreach (GameObject item in pros)
                         {
                             if (item.GetComponent<objet1>().nom.Equals(targ))
@@ -415,7 +412,6 @@ public class Submit : MonoBehaviour
         dbconn.Close();
         dbconn = null;
         ////SQL//////
-        ///
 
         //Les repres s'inhibent si il y a
 
@@ -637,7 +633,7 @@ public class Submit : MonoBehaviour
 
         
 
-        //séparer le need selon les /(ou) et les ,(et)
+        //séparation des need selon les /(ou) et les ,(et)
         List<List<string>>  listName = new List<List<string>>();
         List<string> subList = new List<string>();
 
@@ -679,9 +675,6 @@ public class Submit : MonoBehaviour
             subList2.Clear();
         }
         //on a donc listName la liste [[A,B],[C,D]] pour A,B/C,D
-
-
-        //ENSUITE MODIFIER POUR QUE 9A MARCHE 5BOUCLE POUR TOU LES TEMRE FAIRE GAFE AU RETURN MEGA CHIANT 0 GERER°!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
         foreach (List<string> element in listName)
         {
@@ -745,7 +738,7 @@ public class Submit : MonoBehaviour
     }
 
     private bool isPresent(string name) //informe sur laa presence de la brique sur le vecteur 
-                                        //ET vérifie pour les promoteurs qu'ils sont bien en place Non pas faisable en fait (voir plus haut)
+                                     
     {
         bool ok = false;
 
